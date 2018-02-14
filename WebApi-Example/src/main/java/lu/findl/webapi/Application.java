@@ -2,11 +2,13 @@ package lu.findl.webapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-public class WebApiExampleApplication {
+@Import({ lu.findl.dao.Application.class })
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebApiExampleApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
